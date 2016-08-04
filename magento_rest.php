@@ -20,7 +20,7 @@
 *   );
 *   $return = $api->get("products", $search);
 *
-* @Author: Thierry HAY X
+* @Author: Thierry HAY
 */
 
  class maRest 
