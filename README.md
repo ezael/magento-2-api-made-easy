@@ -120,8 +120,8 @@ $search = array(
 $retour = $api->get("products", $search);
 ```
 
-### I want to retrive all products
-U cant use a get with search criteria with SKU != "" :
+### I want to retrieve all products in Catalog
+U can use a get with search criteria SKU != "" :
 ```php
 $search = array(
     array ("sku", "neq", ""),
