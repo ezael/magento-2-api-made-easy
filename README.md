@@ -3,6 +3,7 @@
 A litttle PHP Class who can help using the Magento 2 REST API. Easy to understand, easy to use !
 
 ## API Reference
+
 ### Connection to your MAGENTO 2 REST API
 ```php
 <?php
@@ -11,6 +12,7 @@ include("magento_rest.php");
 $api = new maRest("www.mywebsite.com");   
 $api->connect("myuser","mypassword");
 ```
+
 ### GET one thing
 U can use this method to retrieve all things that only need one get parameter.
 See the http://devdocs.magento.com/guides/v2.0/rest/list.html to know wath u can get with this call.
@@ -19,6 +21,7 @@ $retour = $api->get("products/MYSKU");
 //or
 $retour = $api->get("cmsPage/myPageId");
 ```
+
 ### GET with search
 In magento 2 rest api, u need to use search criteria if u want to retrieve multiple results with a GET, like all customers by example.
 
@@ -61,13 +64,14 @@ $search = array(
 
 $retour = $api->get("products", $search);
 ```
+
 ### DELETE ONE THING
 ```php
 $retour = $api->delete("products/mySku");
 ```
 See the http://devdocs.magento.com/guides/v2.0/rest/list.html to know wath u can delete with this call.
 
-### INSERT NEW DATA
+### INSERT NEW RECORD
 First, u need to create an array with the data u want to insert. U can only insert ONE record at a time (one product, by example).
 ```php
 $data = array(
