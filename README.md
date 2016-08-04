@@ -4,7 +4,7 @@ A litttle PHP Class which can help using the Magento 2 REST API. Easy to underst
 
 ## API Reference
 
-### Connect to your MAGENTO 2 REST API
+### CONNECT TO YOUR MAGENTO 2 REST API
 ```php
 <?php
 include("magento_rest.php");
@@ -13,7 +13,7 @@ $api = new maRest("www.mywebsite.com");
 $api->connect("myuser","mypassword");
 ```
 
-### GET one thing
+### GET ONE THING
 U can use this method to retrieve all things that only need one get parameter.
 See the http://devdocs.magento.com/guides/v2.0/rest/list.html to know wath u can get with this call.
 ```php
@@ -22,7 +22,7 @@ $retour = $api->get("products/MYSKU");
 $retour = $api->get("cmsPage/myPageId");
 ```
 
-### GET with search
+### GET WITH SEARCH CRITERIA
 In magento 2 rest api, u need to use search criteria if u want to retrieve multiple results with a GET, like all customers by example.
 
 first, u need to create an array with your search criteria before calling the method.
