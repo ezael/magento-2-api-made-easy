@@ -4,7 +4,7 @@ A litttle PHP Class who can help using the Magento 2 REST API. Easy to understan
 
 ## API Reference
 
-### Connection to your MAGENTO 2 REST API
+### Connect to your MAGENTO 2 REST API
 ```php
 <?php
 include("magento_rest.php");
