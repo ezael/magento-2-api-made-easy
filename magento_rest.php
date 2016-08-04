@@ -21,7 +21,6 @@
 *   $return = $api->get("products", $search);
 *
 * @Author: Thierry HAY
-* test git kraken 2
 */
 
  class maRest 
