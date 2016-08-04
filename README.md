@@ -71,7 +71,7 @@ $retour = $api->delete("products/mySku");
 ```
 See the http://devdocs.magento.com/guides/v2.0/rest/list.html to know wath u can delete with this call.
 
-### INSERT NEW RECORD
+### INSERT A NEW RECORD
 First, u need to create an array with the data u want to insert. U can only insert ONE record at a time (one product, by example).
 ```php
 $data = array(
