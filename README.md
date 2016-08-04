@@ -114,7 +114,7 @@ If u want to use search criteria to retrieve one or more record by ID, u can't u
 ```php
 
 $search = array(
-    array ("id", "eq", "2047"), //*** this one wil NOT work
+    array ("id", "eq", "2047"), // this one wil NOT work
     array ("entity_id", "eq", "2047"), // this one is FINE !
 );
 
