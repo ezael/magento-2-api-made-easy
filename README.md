@@ -112,10 +112,28 @@ $retour = $api->put("products/mySku", $data);
 ### I want to retrieve something by ID
 If u want to use search criteria to retrieve one or more record by ID, u can't use the field 'id'. Instead use 'entity_id' :
 ```php
-
 $search = array(
     array ("id", "eq", "2047"), // this one wil NOT work
     array ("entity_id", "eq", "2047"), // this one is FINE !
+);
+
+$retour = $api->get("products", $search);
+```
+
+### I want to retrive all products
+U cant use a get with search criteria with SKU != "" :
+```php
+$search = array(
+    array ("sku", "neq", ""),
+);
+
+$retour = $api->get("products", $search);
+```
+
+If u want to retrieve all products with visibility flag = "Catalog, Search" :
+```php
+$search = array(
+    array ("visibility", "eq", "4"),
 );
 
 $retour = $api->get("products", $search);
