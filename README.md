@@ -13,6 +13,7 @@ $api->connect("myuser","mypassword");
 ```
 ### GET one thing
 U can use this method to retrieve all things that only need one get parameter.
+See the http://devdocs.magento.com/guides/v2.0/rest/list.html to know wath u can get with this call.
 ```php
 $retour = $api->get("products/MYSKU");
 //or
@@ -29,9 +30,9 @@ $search = array(
 
 $retour = $api->get("products", $search);
 ```
-First argurment is the field you search, Second argument is the condition, Thrisd argument is the value you search.
+First argurment is the field you search, Second argument is the condition, Third argument is the value you search.
 
-Possibles conditions (from http://devdocs.magento.com/guides/v2.1/howdoi/webapi/search-criteria.html)
+Possible conditions (from http://devdocs.magento.com/guides/v2.1/howdoi/webapi/search-criteria.html)
 
 | Condition |	Notes |
 | --- | --- |
@@ -51,7 +52,7 @@ Possibles conditions (from http://devdocs.magento.com/guides/v2.1/howdoi/webapi/
 | null |Null |
 | to | The end of a range. Must be used with from |
 
-U can use multiples conditions :
+U can use multiples conditions in one call :
 ```php
 $search = array(
     array ("entity_id", "eq", "2047"),
@@ -59,4 +60,33 @@ $search = array(
 );
 
 $retour = $api->get("products", $search);
+```
+### DELETE ONE THING
+```php
+$retour = $api->delete("products/mySku");
+```
+See the http://devdocs.magento.com/guides/v2.0/rest/list.html to know wath u can delete with this call.
+
+### INSERT NEW DATA
+First, we need to create an array with the data u want to insert. U can only insert ONE record at a time (one product, by example).
+```php
+$data = array(
+    "product" => array(
+        "sku"               => "TEST PRODUCTX3 " . uniqid(),
+        'name'              => 'Simple Product ' . uniqid(),
+        'visibility'        => 4, /*'catalog',*/
+        'type_id'           => 'simple',
+        'price'             => 99.95,
+        'status'            => 1,
+        'attribute_set_id'  => 4,
+        'weight'            => 1,
+        'custom_attributes' => array(
+            array( 'attribute_code' => 'category_ids',      'value' => ["11"] ),
+            array( 'attribute_code' => 'description',       'value' => 'Simple Description' ),
+            array( 'attribute_code' => 'short_description', 'value' => 'Simple  Short Description' ),
+        ),
+    )
+);
+
+$retour = $api->post("products", $data);
 ```
