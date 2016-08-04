@@ -94,3 +94,15 @@ $data = array(
 
 $retour = $api->post("products", $data);
 ```
+
+### UPDATE A RECORD
+U need to create an array with the values u want to modify before calling the method.
+```php
+$data = array(
+    "product" => array(
+        'price'             => 9000000,
+    )
+);
+
+$retour = $api->put("products/mySku", $data);
+```
