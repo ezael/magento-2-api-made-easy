@@ -20,11 +20,6 @@
 *   );
 *   $return = $api->get("products", $search);
 *
-* test
-* test
-* test
-* test 
-* test
 * @Author: Thierry HAY
 */
 
