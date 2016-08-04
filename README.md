@@ -12,7 +12,7 @@ $api = new maRest("www.mywebsite.com");
 $api->connect("myuser","mypassword");
 ```
 ### GET one thing
-U can use this method to retrieve all things that only need one get parameter
+U can use this method to retrieve all things that only need one get parameter.
 ```php
 $retour = $api->get("products/MYSKU");
 //or
@@ -21,11 +21,13 @@ $retour = $api->get("cmsPage/myPageId");
 ### GET with search
 In magento 2 rest api, u need to use search criteria if u want to retrieve multiple results with a GET, like all customers by example.
 
-first, u need to create an array with your search criteria.
+first, u need to create an array with your search criteria before calling the method.
 ```php
 $search = array(
     array ("entity_id", "eq", "2047"),
 );
+
+$retour = $api->get("products", $search);
 ```
 First argurment is the field you search, Second argument is the condition, Thrisd argument is the value you search.
 
@@ -55,6 +57,6 @@ $search = array(
     array ("entity_id", "eq", "2047"),
     array ("sku", "like", "%MP10%"),
 );
+
+$retour = $api->get("products", $search);
 ```
-
-
