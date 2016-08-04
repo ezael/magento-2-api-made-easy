@@ -106,3 +106,17 @@ $data = array(
 
 $retour = $api->put("products/mySku", $data);
 ```
+
+## TIPS & HELP with the APis of MAGENTO 2 ^^
+
+### I want to retrieve something by ID
+If u want to use search criteria to retrieve one or more record by ID, u can't use the field 'id'. Instead use 'intity_id' :
+```php
+
+$search = array(
+    array ("id", "eq", "2047"), //*** this one wil NOT work
+    array ("entity_id", "eq", "2047"), // this one is FINE !
+);
+
+$retour = $api->get("products", $search);
+```
