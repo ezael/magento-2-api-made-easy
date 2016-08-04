@@ -1,7 +1,6 @@
 # magento-2-api-made-easy
 ## Synopsis
-A litttle PHP Class who can help using the Magento 2 REST API. Easy to understand, easy to use !
-Still working on it ^^.
+A litttle PHP Class which can help using the Magento 2 REST API. Easy to understand, easy to use ! Still working on it ^^.
 
 ## API Reference
 
