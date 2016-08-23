@@ -3,23 +3,6 @@
 * Magento2 REST API
 * Easy use of the new Magento 2 REST API ;)
 *
-* HOWTO use it :
-* 1/ open a connexion with API
-* $api = new maRest("www.mywebsite.com"); 
-*
-* 2/ connect with your credentials
-* $api->connect('myuser','mypassword');
-*
-* 3/ use it :
-* - to call a GET method, WITHOUT search criteria : 
-*   $return = $api->get("products/MYSKU");
-*
-* - to call a GET method, WITH search criteria : u hav to pass a multi dimensions array
-*   $search = array(
-*      array ("entity_id", "eq", "859"),
-*   );
-*   $return = $api->get("products", $search);
-*
 * @Author: Thierry HAY
 */
 
